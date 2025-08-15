@@ -1,0 +1,43 @@
+{
+  "name": "islamic-center-charity-association",
+  "version": "1.0.0",
+  "description": "Islamic Center Charity Association - Web Application for managing centers and services",
+  "main": "frontend/index.html",
+  "scripts": {
+    "start": "node scripts/lan-server.js",
+    "dev": "cd frontend && npx http-server -p 8080 -c-1",
+    "build": "echo 'No build process required - static site'",
+    "test": "echo 'No tests specified'",
+    "lan": "node scripts/lan-server.js",
+    "package": "npm run create-zip",
+    "create-zip": "node -e \"const fs=require('fs');const path=require('path');const archiver=require('archiver');const output=fs.createWriteStream('jamiyati-app-portable.zip');const archive=archiver('zip',{zlib:{level:9}});output.on('close',()=>console.log('Package created: jamiyati-app-portable.zip ('+archive.pointer()+' bytes)'));archive.on('error',err=>{throw err;});archive.pipe(output);archive.directory('frontend/','');archive.directory('scripts/','scripts/');archive.file('README.md',{name:'README.md'});archive.finalize();\""
+  },
+  "keywords": [
+    "islamic",
+    "charity",
+    "association",
+    "centers",
+    "web-app",
+    "arabic",
+    "rtl"
+  ],
+  "author": "Islamic Center Charity Association",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/islamic-center-charity-association.git"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "devDependencies": {
+    "archiver": "^5.3.1"
+  },
+  "files": [
+    "frontend/**/*",
+    "scripts/**/*",
+    "README.md",
+    "netlify.toml",
+    "vercel.json"
+  ]
+}

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="mapGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8f4f8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d1ecf1;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f0f8ff"/>
+  
+  <!-- Jordan country shape (simplified) -->
+  <path d="M 200,100 
+           L 600,120 
+           L 650,180 
+           L 680,250 
+           L 700,350 
+           L 650,450 
+           L 580,480 
+           L 400,500 
+           L 280,480 
+           L 200,420 
+           L 180,350 
+           L 160,280 
+           L 170,200 
+           Z" 
+        fill="url(#mapGradient)" 
+        stroke="#2c5282" 
+        stroke-width="3" 
+        filter="url(#shadow)"/>
+  
+  <!-- Country label -->
+  <text x="400" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#2c5282">
+    المملكة الأردنية الهاشمية
+  </text>
+  
+  <!-- Cities markers (will be replaced by interactive markers) -->
+  <!-- Amman -->
+  <circle cx="480" cy="270" r="8" fill="#dc3545" stroke="#fff" stroke-width="2"/>
+  <text x="480" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2c5282">عمان</text>
+  
+  <!-- Irbid -->
+  <circle cx="520" cy="150" r="6" fill="#dc3545" stroke="#fff" stroke-width="2"/>
+  <text x="520" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2c5282">إربد</text>
+  
+  <!-- Zarqa -->
+  <circle cx="560" cy="300" r="6" fill="#dc3545" stroke="#fff" stroke-width="2"/>
+  <text x="560" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2c5282">الزرقاء</text>
+  
+  <!-- Karak -->
+  <circle cx="440" cy="420" r="6" fill="#dc3545" stroke="#fff" stroke-width="2"/>
+  <text x="440" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2c5282">الكرك</text>
+  
+  <!-- Aqaba -->
+  <circle cx="360" cy="510" r="6" fill="#dc3545" stroke="#fff" stroke-width="2"/>
+  <text x="360" y="495" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2c5282">العقبة</text>
+  
+  <!-- Neighboring countries labels -->
+  <text x="100" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#666" opacity="0.7">فلسطين</text>
+  <text x="750" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#666" opacity="0.7">العراق</text>
+  <text x="650" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#666" opacity="0.7">سوريا</text>
+  <text x="500" y="580" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#666" opacity="0.7">السعودية</text>
+  
+  <!-- Compass -->
+  <g transform="translate(720,520)">
+    <circle cx="0" cy="0" r="30" fill="rgba(255,255,255,0.9)" stroke="#2c5282" stroke-width="2"/>
+    <path d="M 0,-20 L 8,0 L 0,20 L -8,0 Z" fill="#dc3545"/>
+    <text x="0" y="-35" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c5282">ش</text>
+  </g>
+  
+  <!-- Scale -->
+  <g transform="translate(50,550)">
+    <line x1="0" y1="0" x2="100" y2="0" stroke="#2c5282" stroke-width="2"/>
+    <line x1="0" y1="-5" x2="0" y2="5" stroke="#2c5282" stroke-width="2"/>
+    <line x1="100" y1="-5" x2="100" y2="5" stroke="#2c5282" stroke-width="2"/>
+    <text x="50" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c5282">100 كم</text>
+  </g>
+</svg>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم - جمعيتي (نسخة تجريبية)</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- الهيدر -->
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="assets/logo.svg" alt="شعار جمعيتي">
+                <h1>جمعيتي</h1>
+            </div>
+            
+            <div class="user-info">
+                <div class="user-avatar">م</div>
+                <span class="username">مستخدم تجريبي</span>
+                <button class="logout-btn">تسجيل الخروج</button>
+            </div>
+        </div>
+    </header>
+    
+    <!-- المحتوى الرئيسي -->
+    <div class="container">
+        <div style="text-align: center; margin-bottom: 3rem;">
+            <h2 style="color: white; font-size: 2.5rem; margin-bottom: 0.5rem;">أهلاً بك في جمعيتي</h2>
+            <p style="color: rgba(255,255,255,0.9); font-size: 1.2rem;">نظام إدارة شامل للجمعيات الخيرية والأنشطة المجتمعية</p>
+        </div>
+        
+        <!-- لوحة التحكم -->
+        <div class="dashboard">
+            <!-- بطاقة إدارة الأعضاء -->
+            <div class="card">
+                <h3>👥 إدارة الأعضاء</h3>
+                <p>تسجيل الأعضاء الجدد وإدارة بياناتهم ومتابعة اشتراكاتهم وأنشطتهم داخل الجمعية.</p>
+                <div style="margin-top: 1rem;">
+                    <div style="background: #f8f9fa; padding: 15px; border-radius: 10px; margin-bottom: 15px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span>إجمالي الأعضاء</span>
+                            <strong style="color: #667eea; font-size: 1.2rem;">247</strong>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 10px;">
+                        <button class="btn" style="flex: 1; padding: 8px; font-size: 0.9rem;">عضو جديد</button>
+                        <button class="btn" style="flex: 1; padding: 8px; font-size: 0.9rem;">قائمة الأعضاء</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- بطاقة الأنشطة والفعاليات -->
+            <div class="card">
+                <h3>📅 الأنشطة والفعاليات</h3>
+                <p>تخطيط وتنظيم الأنشطة المختلفة، إدارة التسجيلات، ومتابعة تنفيذ الفعاليات.</p>
+                <div style="margin-top: 1rem;">
+                    <div style="background: #f8f9fa; padding: 15px; border-radius: 10px; margin-bottom: 15px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                            <span>الفعاليات القادمة</span>
+                            <strong style="color: #28a745; font-size: 1.2rem;">8</strong>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span>فعالية اليوم</span>
+                            <strong style="color: #dc3545;">ورشة التطوع</strong>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 10px;">
+                        <button class="btn" style="flex: 1; padding: 8px; font-size: 0.9rem;">فعالية جديدة</button>
+                        <button class="btn" style="flex: 1; padding: 8px; font-size: 0.9rem;">جدول الفعاليات</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- بطاقة المراكز -->
+            <div class="card">
+                <h3>🏢 مراكز الجمعية</h3>
+                <p>عرض مواقع مراكز الجمعية على الخريطة التفاعلية مع تفاصيل كل مركز وطرق التواصل.</p>
+                <div style="margin-top: 1rem;">
+                    <div style="background: #f8f9fa; padding: 15px; border-radius: 10px; margin-bottom: 15px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                            <span>عدد المراكز</span>
+                            <strong style="color: #e83e8c; font-size: 1.2rem;">5</strong>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span>المراكز المفتوحة اليوم</span>
+                            <strong style="color: #28a745;">4</strong>
+                        </div>
+                    </div>
+                    <a href="center-map.html" class="btn" style="display: block; text-align: center;">
+                        🗺️ عرض خريطة المراكز
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- إحصائيات سريعة -->
+        <div style="background: rgba(255,255,255,0.1); border-radius: 20px; padding: 2rem; margin-top: 3rem; text-align: center;">
+            <h3 style="color: white; margin-bottom: 2rem;">إحصائيات سريعة</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
+                <div style="color: white;">
+                    <div style="font-size: 2.5rem; font-weight: bold; color: #ffd700;">247</div>
+                    <div>إجمالي الأعضاء</div>
+                </div>
+                <div style="color: white;">
+                    <div style="font-size: 2.5rem; font-weight: bold; color: #87ceeb;">156</div>
+                    <div>فعالية منجزة</div>
+                </div>
+                <div style="color: white;">
+                    <div style="font-size: 2.5rem; font-weight: bold; color: #ffa500;">5</div>
+                    <div>مراكز الجمعية</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- لا نحتاج JavaScript للنسخة التجريبية -->
+</body>
+</html>

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام التسجيل - جمعيتي</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- الهيدر -->
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <a href="logo.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 1rem;">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgdmlld0JveD0iMCAwIDQwMCA0MDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQogIDxkZWZzPg0KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYmdHcmFkaWVudCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+DQogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojNENBRjUwO3N0b3Atb3BhY2l0eToxIiAvPg0KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojMkU3RDMyO3N0b3Atb3BhY2l0eToxIiAvPg0KICAgIDwvbGluZWFyR3JhZGllbnQ+DQogICAgPGxpbmVhckdyYWRpZW50IGlkPSJ0ZXh0R3JhZGllbnQiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjAlIj4NCiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNGRkZGRkY7c3RvcC1vcGFjaXR5OjEiIC8+DQogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNFOEY1RTg7c3RvcC1vcGFjaXR5OjEiIC8+DQogICAgPC9saW5lYXJHcmFkaWVudD4NCiAgPC9kZWZzPg0KICANCiAgPCEtLSBCYWNrZ3JvdW5kIGNpcmNsZSAtLT4NCiAgPGNpcmNsZSBjeD0iMjAwIiBjeT0iMjAwIiByPSIxOTAiIGZpbGw9InVybCgjYmdHcmFkaWVudCkiIHN0cm9rZT0iIzFCNUUyMCIgc3Ryb2tlLXdpZHRoPSI0Ii8+DQogIA0KICA8IS0tIElzbGFtaWMgY3Jlc2NlbnQgYW5kIHN0YXIgLS0+DQogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDIwMCwxMjApIj4NCiAgICA8cGF0aCBkPSJNLTMwLDAgQTMwLDMwIDAgMSwxIDAsIDMwIEEyMCwyMCAwIDEsMCAwLC0zMCBaIiBmaWxsPSJ1cmwoI3RleHRHcmFkaWVudCkiIHN0cm9rZT0iI0ZGRDcwMCIgc3Ryb2tlLXdpZHRoPSIyIi8+DQogICAgPHBvbHlnb24gcG9pbnRzPSIyMCwtMjAgMjUsLTUgNDAsLTUgMjgsNSAzMywyMCAyMCwxMCA3LDIwIDEyLDUgMCwtNSAxNSwtNSIgZmlsbD0idXJsKCN0ZXh0R3JhZGllbnQpIiBzdHJva2U9IiNGRkQ3MDAiIHN0cm9rZS13aWR0aD0iMSIvPg0KICA8L2c+DQogIA0KICA8IS0tIEFyYWJpYyB0ZXh0IHBsYWNlaG9sZGVyIC0tPg0KICA8dGV4dCB4PSIyMDAiIHk9IjIyMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0idXJsKCN0ZXh0R3JhZGllbnQpIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjQiIGZvbnQtd2VpZ2h0PSJib2xkIj7Yp9mE2YXYsdmD2LIg2KfZhNil2LPZhNin2YXZijwvdGV4dD4NCiAgPHRleHQgeD0iMjAwIiB5PSIyNTAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9InVybCgjdGV4dEdyYWRpZW50KSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE4Ij7Yp9mE2K7ZitmK2LHZijwvdGV4dD4NCiAgDQogIDwhLS0gRGVjb3JhdGl2ZSBib3JkZXIgLS0+DQogIDxjaXJjbGUgY3g9IjIwMCIgY3k9IjIwMCIgcj0iMTgwIiBmaWxsPSJub25lIiBzdHJva2U9InVybCgjdGV4dEdyYWRpZW50KSIgc3Ryb2tlLXdpZHRoPSIyIiBvcGFjaXR5PSIwLjUiLz4NCiAgDQogIDwhLS0gQm90dG9tIHRleHQgLS0+DQogIDx0ZXh0IHg9IjIwMCIgeT0iMzIwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ1cmwoI3RleHRHcmFkaWVudCkiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNiIgb3BhY2l0eT0iMC45Ij7YrNmF2LnZitipINiu2YrYsdmK2Kk8L3RleHQ+DQogIDx0ZXh0IHg9IjIwMCIgeT0iMzQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ1cmwoI3RleHRHcmFkaWVudCkiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgb3BhY2l0eT0iMC44Ij7Yp9mE2KPYsdiv2YY8L3RleHQ+DQo8L3N2Zz4=" alt="شعار جمعية المركز الإسلامي الخيري" style="width: 60px; height: 60px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                    <div>
+                        <h1 style="margin: 0; font-size: 1.8rem;">جمعيتي</h1>
+                        <p style="margin: 0; font-size: 0.8rem; color: #666; opacity: 0.8;">المركز الإسلامي الخيري</p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="user-info">
+                <a href="index.html" class="btn btn-secondary">العودة للرئيسية</a>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="registration-container">
+            <div class="registration-header">
+                <h2>نظام التسجيل الشامل</h2>
+                <p>انضم إلى شبكة جمعيتي واحصل على خدماتنا المميزة</p>
+            </div>
+            
+            <form id="registrationForm" class="registration-form">
+                <!-- معلومات شخصية أساسية -->
+                <div class="form-section">
+                    <h3>📋 المعلومات الشخصية</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName" class="required">الاسم الكامل</label>
+                            <input type="text" id="fullName" name="fullName" required
+                                placeholder="الاسم الكامل كما هو مدون في الهوية">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nationalId">رقم الهوية/الجواز</label>
+                            <input type="text" id="nationalId" name="nationalId"
+                                placeholder="رقم الهوية الشخصية أو جواز السفر">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="birthDate" class="required">تاريخ الميلاد</label>
+                            <input type="date" id="birthDate" name="birthDate" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="gender">الجنس</label>
+                            <select id="gender" name="gender">
+                                <option value="">اختر الجنس</option>
+                                <option value="male">ذكر</option>
+                                <option value="female">أنثى</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="maritalStatus">الحالة الاجتماعية</label>
+                            <select id="maritalStatus" name="maritalStatus">
+                                <option value="">اختر الحالة</option>
+                                <option value="single">أعزب</option>
+                                <option value="married">متزوج</option>
+                                <option value="divorced">مطلق</option>
+                                <option value="widowed">أرمل</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- معلومات السكن والإقامة -->
+                <div class="form-section">
+                    <h3>🏠 معلومات السكن والإقامة</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city" class="required">المدينة</label>
+                            <select id="city" name="city" required>
+                                <option value="">اختر المدينة</option>
+                                <option value="amman">عمان</option>
+                                <option value="irbid">إربد</option>
+                                <option value="zarqa">الزرقاء</option>
+                                <option value="russeifa">الرصيفة</option>
+                                <option value="wadi_sir">وادي السير</option>
+                                <option value="aqaba">العقبة</option>
+                                <option value="salt">السلط</option>
+                                <option value="madaba">مادبا</option>
+                                <option value="karak">الكرك</option>
+                                <option value="tafilah">الطفيلة</option>
+                                <option value="maan">معان</option>
+                                <option value="ajloun">عجلون</option>
+                                <option value="jerash">جرش</option>
+                                <option value="mafraq">المفرق</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="governorate">المحافظة</label>
+                            <select id="governorate" name="governorate">
+                                <option value="">اختر المحافظة</option>
+                                <option value="amman">عمان</option>
+                                <option value="irbid">إربد</option>
+                                <option value="zarqa">الزرقاء</option>
+                                <option value="balqa">البلقاء</option>
+                                <option value="karak">الكرك</option>
+                                <option value="tafilah">الطفيلة</option>
+                                <option value="maan">معان</option>
+                                <option value="aqaba">العقبة</option>
+                                <option value="madaba">مادبا</option>
+                                <option value="ajloun">عجلون</option>
+                                <option value="jerash">جرش</option>
+                                <option value="mafraq">المفرق</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group full-width">
+                            <label for="address" class="required">عنوان السكن التفصيلي</label>
+                            <textarea id="address" name="address" rows="3" required
+                                placeholder="العنوان التفصيلي: المحافظة، المدينة، الحي، اسم الشارع، رقم المبنى"></textarea>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- معلومات التواصل -->
+                <div class="form-section">
+                    <h3>📞 معلومات التواصل</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phoneNumber" class="required">رقم الهاتف</label>
+                            <input type="tel" id="phoneNumber" name="phoneNumber" required
+                                placeholder="07XXXXXXXX أو +962XXXXXXXXX">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="whatsapp">رقم الواتساب</label>
+                            <input type="tel" id="whatsapp" name="whatsapp"
+                                placeholder="رقم الواتساب (إن كان مختلفاً عن رقم الهاتف)">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">البريد الإلكتروني</label>
+                            <input type="email" id="email" name="email"
+                                placeholder="example@email.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="emergencyContact">جهة اتصال طوارئ</label>
+                            <input type="tel" id="emergencyContact" name="emergencyContact"
+                                placeholder="رقم هاتف للطوارئ">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- المعلومات المهنية والتعليمية -->
+                <div class="form-section">
+                    <h3>🎓 المعلومات المهنية والتعليمية</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="education">المستوى التعليمي</label>
+                            <select id="education" name="education">
+                                <option value="">اختر المستوى التعليمي</option>
+                                <option value="primary">ابتدائي</option>
+                                <option value="secondary">ثانوي</option>
+                                <option value="diploma">دبلوم</option>
+                                <option value="bachelor">بكالوريوس</option>
+                                <option value="master">ماجستير</option>
+                                <option value="phd">دكتوراه</option>
+                                <option value="other">أخرى</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="profession">المهنة</label>
+                            <input type="text" id="profession" name="profession"
+                                placeholder="المهنة أو التخصص">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="workplace">مكان العمل</label>
+                            <input type="text" id="workplace" name="workplace"
+                                placeholder="اسم الشركة أو المؤسسة">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="monthlyIncome">الدخل الشهري التقريبي</label>
+                            <select id="monthlyIncome" name="monthlyIncome">
+                                <option value="">اختر الفئة</option>
+                                <option value="less-300">أقل من 300 دينار</option>
+                                <option value="300-500">300-500 دينار</option>
+                                <option value="500-750">500-750 دينار</option>
+                                <option value="750-1000">750-1000 دينار</option>
+                                <option value="1000-1500">1000-1500 دينار</option>
+                                <option value="more-1500">أكثر من 1500 دينار</option>
+                                <option value="no-income">لا يوجد دخل</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- الرؤية الشخصية والتطلعات -->
+                <div class="form-section">
+                    <h3>💭 الرؤية الشخصية والتطلعات</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group full-width">
+                            <label for="outlook" class="required">رؤيتك الشخصية</label>
+                            <textarea id="outlook" name="outlook" rows="4" required
+                                placeholder="شاركنا رؤيتك الشخصية وأهدافك في التطوع والمساهمة المجتمعية..."></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group full-width">
+                            <label for="interests">المجالات التي تهتم بها</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="interests" value="education">
+                                    التعليم والتدريب
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="interests" value="health">
+                                    الصحة والعلاج
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="interests" value="social">
+                                    الخدمات الاجتماعية
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="interests" value="environment">
+                                    البيئة والاستدامة
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="interests" value="relief">
+                                    الإغاثة والطوارئ
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="interests" value="youth">
+                                    أنشطة الشباب
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- المهارات والخبرات -->
+                <div class="form-section">
+                    <h3>⚡ المهارات والخبرات</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group full-width">
+                            <label for="skills">المهارات المتاحة</label>
+                            <textarea id="skills" name="skills" rows="3"
+                                placeholder="اذكر مهاراتك وخبراتك التي يمكن الاستفادة منها (تقنية، إدارية، فنية، لغوية، إلخ)"></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="languages">اللغات</label>
+                            <input type="text" id="languages" name="languages"
+                                placeholder="اللغات التي تجيدها (مثل: العربية، الإنجليزية، الفرنسية)">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="availability">مدى التفرغ</label>
+                            <select id="availability" name="availability">
+                                <option value="">اختر مدى التفرغ</option>
+                                <option value="full-time">متفرغ كلياً</option>
+                                <option value="part-time">متفرغ جزئياً</option>
+                                <option value="weekends">عطل نهاية الأسبوع فقط</option>
+                                <option value="evenings">المساء فقط</option>
+                                <option value="flexible">حسب الحاجة</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- معلومات إضافية -->
+                <div class="form-section">
+                    <h3>ℹ️ معلومات إضافية</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="referralSource">كيف سمعت عنا؟</label>
+                            <select id="referralSource" name="referralSource">
+                                <option value="">اختر المصدر</option>
+                                <option value="friend">من صديق أو قريب</option>
+                                <option value="social-media">وسائل التواصل الاجتماعي</option>
+                                <option value="website">موقعنا الإلكتروني</option>
+                                <option value="event">من خلال فعالية أو مؤتمر</option>
+                                <option value="news">الأخبار أو الإعلام</option>
+                                <option value="search">محرك البحث</option>
+                                <option value="other">أخرى</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="preferredCenter">المركز المفضل</label>
+                            <select id="preferredCenter" name="preferredCenter">
+                                <option value="">اختر المركز</option>
+                                <option value="amman">مركز عمان الرئيسي</option>
+                                <option value="irbid">مركز إربد</option>
+                                <option value="zarqa">مركز الزرقاء</option>
+                                <option value="karak">مركز الكرك</option>
+                                <option value="aqaba">مركز العقبة</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group full-width">
+                            <label for="additionalNotes">ملاحظات إضافية</label>
+                            <textarea id="additionalNotes" name="additionalNotes" rows="3"
+                                placeholder="أي معلومات إضافية تود مشاركتها معنا"></textarea>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- الموافقات والشروط -->
+                <div class="form-section">
+                    <h3>✅ الموافقات والشروط</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group full-width">
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="agreement" value="terms" required>
+                                    أوافق على <a href="#" target="_blank">الشروط والأحكام</a> الخاصة بالجمعية
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="agreement" value="privacy" required>
+                                    أوافق على <a href="#" target="_blank">سياسة الخصوصية</a> ومعالجة بياناتي الشخصية
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="agreement" value="contact">
+                                    أوافق على تلقي التحديثات والإشعارات من الجمعية
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="agreement" value="newsletter">
+                                    أرغب في الاشتراك في النشرة البريدية
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- أزرار التحكم -->
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">
+                        <span class="btn-text">تسجيل الطلب</span>
+                        <span class="btn-loading hidden">جاري التسجيل...</span>
+                    </button>
+                    <button type="reset" class="btn btn-secondary">مسح البيانات</button>
+                    <a href="index.html" class="btn btn-outline">العودة للرئيسية</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script src="js/test-data.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/registration.js"></script>
+</body>
+</html>

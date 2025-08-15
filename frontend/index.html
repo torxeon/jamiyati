@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الواجهة الرئيسية - جمعيتي</title>
+    <!-- Cairo font for Arabic typography (inserted before custom CSS) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Tailwind CDN BEFORE the site stylesheet so our CSS can override Tailwind preflight -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- الهيدر -->
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <a href="logo.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 1rem;">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgdmlld0JveD0iMCAwIDQwMCA0MDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQogIDxkZWZzPg0KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYmdHcmFkaWVudCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+DQogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojNENBRjUwO3N0b3Atb3BhY2l0eToxIiAvPg0KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojMkU3RDMyO3N0b3Atb3BhY2l0eToxIiAvPg0KICAgIDwvbGluZWFyR3JhZGllbnQ+DQogICAgPGxpbmVhckdyYWRpZW50IGlkPSJ0ZXh0R3JhZGllbnQiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjAlIj4NCiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNGRkZGRkY7c3RvcC1vcGFjaXR5OjEiIC8+DQogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNFOEY1RTg7c3RvcC1vcGFjaXR5OjEiIC8+DQogICAgPC9saW5lYXJHcmFkaWVudD4NCiAgPC9kZWZzPg0KICANCiAgPCEtLSBCYWNrZ3JvdW5kIGNpcmNsZSAtLT4NCiAgPGNpcmNsZSBjeD0iMjAwIiBjeT0iMjAwIiByPSIxOTAiIGZpbGw9InVybCgjYmdHcmFkaWVudCkiIHN0cm9rZT0iIzFCNUUyMCIgc3Ryb2tlLXdpZHRoPSI0Ii8+DQogIA0KICA8IS0tIElzbGFtaWMgY3Jlc2NlbnQgYW5kIHN0YXIgLS0+DQogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDIwMCwxMjApIj4NCiAgICA8cGF0aCBkPSJNLTMwLDAgQTMwLDMwIDAgMSwxIDAsIDMwIEEyMCwyMCAwIDEsMCAwLC0zMCBaIiBmaWxsPSJ1cmwoI3RleHRHcmFkaWVudCkiIHN0cm9rZT0iI0ZGRDcwMCIgc3Ryb2tlLXdpZHRoPSIyIi8+DQogICAgPHBvbHlnb24gcG9pbnRzPSIyMCwtMjAgMjUsLTUgNDAsLTUgMjgsNSAzMywyMCAyMCwxMCA3LDIwIDEyLDUgMCwtNSAxNSwtNSIgZmlsbD0idXJsKCN0ZXh0R3JhZGllbnQpIiBzdHJva2U9IiNGRkQ3MDAiIHN0cm9rZS13aWR0aD0iMSIvPg0KICA8L2c+DQogIA0KICA8IS0tIEFyYWJpYyB0ZXh0IHBsYWNlaG9sZGVyIC0tPg0KICA8dGV4dCB4PSIyMDAiIHk9IjIyMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0idXJsKCN0ZXh0R3JhZGllbnQpIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjQiIGZvbnQtd2VpZ2h0PSJib2xkIj7Yp9mE2YXYsdmD2LIg2KfZhNil2LPZhNin2YXZijwvdGV4dD4NCiAgPHRleHQgeD0iMjAwIiB5PSIyNTAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9InVybCgjdGV4dEdyYWRpZW50KSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE4Ij7Yp9mE2K7ZitmK2LHZijwvdGV4dD4NCiAgDQogIDwhLS0gRGVjb3JhdGl2ZSBib3JkZXIgLS0+DQogIDxjaXJjbGUgY3g9IjIwMCIgY3k9IjIwMCIgcj0iMTgwIiBmaWxsPSJub25lIiBzdHJva2U9InVybCgjdGV4dEdyYWRpZW50KSIgc3Ryb2tlLXdpZHRoPSIyIiBvcGFjaXR5PSIwLjUiLz4NCiAgDQogIDwhLS0gQm90dG9tIHRleHQgLS0+DQogIDx0ZXh0IHg9IjIwMCIgeT0iMzIwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ1cmwoI3RleHRHcmFkaWVudCkiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNiIgb3BhY2l0eT0iMC45Ij7YrNmF2LnZitipINiu2YrYsdmK2Kk8L3RleHQ+DQogIDx0ZXh0IHg9IjIwMCIgeT0iMzQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ1cmwoI3RleHRHcmFkaWVudCkiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgb3BhY2l0eT0iMC44Ij7Yp9mE2KPYsdiv2YY8L3RleHQ+DQo8L3N2Zz4=" alt="شعار جمعية المركز الإسلامي الخيري" style="width: 60px; height: 60px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                    <div>
+                        <h1 style="margin: 0; font-size: 1.8rem;">جمعيتي</h1>
+                        <p style="margin: 0; font-size: 0.8rem; color: #666; opacity: 0.8;">المركز الإسلامي الخيري</p>
+                    </div>
+                </a>
+            </div>
+            
+            <nav class="main-nav">
+                <a href="#home" class="nav-link active">الرئيسية</a>
+                <a href="#centers" class="nav-link">دليل المراكز</a>
+                <a href="#departments" class="nav-link">أقسام الجمعية</a>
+                <a href="#notifications" class="nav-link">الإشعارات</a>
+                <a href="#suggestions" class="nav-link">الاقتراحات</a>
+                <a href="#campaigns" class="nav-link">الحملات</a>
+                <a href="register.html" class="nav-link" style="background: #28a745; color: white;">التسجيل</a>
+            </nav>
+            
+            <div class="user-info">
+                <div class="user-avatar">ج</div>
+                <span class="username">مستخدم</span>
+                <button class="logout-btn">تسجيل الخروج</button>
+            </div>
+        </div>
+    </header>
+    
+    <!-- المحتوى الرئيسي -->
+    <div class="container">
+        <!-- الواجهة الرئيسية -->
+        <section id="home" class="main-section active">
+            <div class="welcome-banner">
+                <h2>أهلاً بك في جمعيتي</h2>
+                <p>منصة تواصل وتنسيق بين الإدارة وجميع المراكز والجمعيات التابعة</p>
+            </div>
+            
+            <!-- الأخبار والمبادرات -->
+            <div class="news-section">
+                <h3>📢 آخر الأخبار والمبادرات</h3>
+                <div class="news-grid">
+                    <div class="news-item">
+                        <div class="news-badge">جديد</div>
+                        <h4>إطلاق مبادرة "كن متطوعاً"</h4>
+                        <p>انضم إلى مبادرتنا الجديدة للتطوع في خدمة المجتمع</p>
+                        <span class="news-date">منذ يوم واحد</span>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-badge urgent">عاجل</div>
+                        <h4>تغيير مواعيد العمل في مركز عمان</h4>
+                        <p>يرجى الانتباه لتغيير مواعيد العمل اعتباراً من الأسبوع القادم</p>
+                        <span class="news-date">منذ 3 ساعات</span>
+                    </div>
+                    <div class="news-item">
+                        <h4>حملة توزيع المساعدات الشتوية</h4>
+                        <p>بدء حملة توزيع المساعدات الشتوية في جميع المحافظات</p>
+                        <span class="news-date">منذ أسبوع</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- الإعلانات المهمة -->
+            <div class="announcements-section">
+                <h3>📝 الإعلانات المهمة</h3>
+                <div class="announcement-list">
+                    <div class="announcement-item">
+                        <div class="announcement-icon">🔔</div>
+                        <div class="announcement-content">
+                            <h4>اجتماع مديري المراكز</h4>
+                            <p>اجتماع طارئ لجميع مديري المراكز يوم الأحد الساعة 10:00 ص</p>
+                        </div>
+                    </div>
+                    <div class="announcement-item">
+                        <div class="announcement-icon">📋</div>
+                        <div class="announcement-content">
+                            <h4>تحديث السياسات الداخلية</h4>
+                            <p>تم تحديث السياسات الداخلية، يرجى مراجعة الدليل الجديد</p>
+                        </div>
+                    </div>
+                    <div class="announcement-item">
+                        <div class="announcement-icon">🎯</div>
+                        <div class="announcement-content">
+                            <h4>ورشة تدريبية - إدارة الأزمات</h4>
+                            <p>ورشة تدريبية حول إدارة الأزمات لجميع الموظفين</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- دليل المراكز -->
+        <section id="centers" class="main-section">
+            <div class="section-header">
+                <h2>🏢 دليل المراكز</h2>
+                <p>جميع المراكز والجمعيات التابعة موزعة حسب المحافظات والقطاعات</p>
+            </div>
+            
+            <!-- REPLACED: React directory mount root (legacy filters/stats and old container removed to avoid duplicate render conflicts) -->
+            <div id="directory-root" dir="rtl"></div>
+            
+            <!-- معلومات إضافية -->
+            <div class="centers-info">
+                <div class="info-card">
+                    <h4>📞 للتواصل والدعم</h4>
+                    <p>دائرة الرعاية الاجتماعية</p>
+                    <p><strong>الهاتف:</strong> 06/5653099</p>
+                    <p><strong>الخلوي:</strong> 0788/410410 - 0790/410410</p>
+                </div>
+                <div class="info-card">
+                    <h4>💳 التبرعات</h4>
+                    <p>البنك الإسلامي الأردني / فرع الشميساني</p>
+                    <p><strong>رقم الحساب:</strong> 46166</p>
+                    <p><strong>CliQ:</strong> 05 IC</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- أقسام الجمعية -->
+        <section id="departments" class="main-section">
+            <div class="section-header">
+                <h2>🏛️ أقسام الجمعية</h2>
+                <p>نظرة شاملة على الأقسام الإدارية ومسؤوليها</p>
+            </div>
+            
+            <div class="departments-grid">
+                <div class="department-card">
+                    <div class="department-icon">👨‍💼</div>
+                    <h3>القسم الإداري</h3>
+                    <p>إدارة الشؤون الإدارية والمالية والموارد البشرية</p>
+                    <div class="department-manager">
+                        <strong>مدير القسم:</strong> أحمد محمد الأحمد
+                        <br>
+                        <strong>الهاتف:</strong> 06-111-2222
+                        <br>
+                        <strong>البريد:</strong> admin@jamiyati.org
+                    </div>
+                </div>
+                
+                <div class="department-card">
+                    <div class="department-icon">🏥</div>
+                    <h3>القسم الطبي</h3>
+                    <p>الإشراف على الخدمات الطبية والصحية في جميع المراكز</p>
+                    <div class="department-manager">
+                        <strong>مدير القسم:</strong> د. فاطمة عبد الله
+                        <br>
+                        <strong>الهاتف:</strong> 06-333-4444
+                        <br>
+                        <strong>البريد:</strong> medical@jamiyati.org
+                    </div>
+                </div>
+                
+                <div class="department-card">
+                    <div class="department-icon">📚</div>
+                    <h3>القسم التعليمي</h3>
+                    <p>تطوير وتنفيذ البرامج التعليمية والتدريبية</p>
+                    <div class="department-manager">
+                        <strong>مدير القسم:</strong> محمد سعيد الخالد
+                        <br>
+                        <strong>الهاتف:</strong> 06-555-6666
+                        <br>
+                        <strong>البريد:</strong> education@jamiyati.org
+                    </div>
+                </div>
+                
+                <div class="department-card">
+                    <div class="department-icon">🤝</div>
+                    <h3>قسم الخدمات الاجتماعية</h3>
+                    <p>تقديم الخدمات الاجتماعية والمساعدات للمحتاجين</p>
+                    <div class="department-manager">
+                        <strong>مدير القسم:</strong> نور الدين حسن
+                        <br>
+                        <strong>الهاتف:</strong> 06-777-8888
+                        <br>
+                        <strong>البريد:</strong> social@jamiyati.org
+                    </div>
+                </div>
+                
+                <div class="department-card">
+                    <div class="department-icon">💰</div>
+                    <h3>القسم المالي</h3>
+                    <p>إدارة الأموال والميزانيات والتبرعات</p>
+                    <div class="department-manager">
+                        <strong>مدير القسم:</strong> عبد الرحمن الزهراني
+                        <br>
+                        <strong>الهاتف:</strong> 06-999-1010
+                        <br>
+                        <strong>البريد:</strong> finance@jamiyati.org
+                    </div>
+                </div>
+                
+                <div class="department-card">
+                    <div class="department-icon">📢</div>
+                    <h3>قسم العلاقات العامة</h3>
+                    <p>التواصل مع الجمهور ووسائل الإعلام والشراكات</p>
+                    <div class="department-manager">
+                        <strong>مدير القسم:</strong> سارة أحمد الحسني
+                        <br>
+                        <strong>الهاتف:</strong> 06-111-1212
+                        <br>
+                        <strong>البريد:</strong> pr@jamiyati.org
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- الإشعارات -->
+        <section id="notifications" class="main-section">
+            <div class="section-header">
+                <h2>🔔 الإشعارات</h2>
+                <p>الفعاليات والورش والأنشطة القادمة</p>
+            </div>
+            
+            <div class="notifications-container">
+                <div class="notifications-filters">
+                    <button class="filter-btn active" data-filter="all">الكل</button>
+                    <button class="filter-btn" data-filter="events">فعاليات</button>
+                    <button class="filter-btn" data-filter="workshops">ورش عمل</button>
+                    <button class="filter-btn" data-filter="meetings">اجتماعات</button>
+                </div>
+                
+                <div class="notifications-list">
+                    <div class="notification-item" data-type="events">
+                        <div class="notification-date">
+                            <span class="day">25</span>
+                            <span class="month">يناير</span>
+                        </div>
+                        <div class="notification-content">
+                            <h4>مؤتمر التطوع السنوي</h4>
+                            <p>مؤتمر سنوي يجمع جميع المتطوعين لعرض الإنجازات ومناقشة الخطط المستقبلية</p>
+                            <div class="notification-meta">
+                                <span>📍 قاعة المؤتمرات - مركز عمان</span>
+                                <span>🕐 10:00 ص - 4:00 م</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="notification-item" data-type="workshops">
+                        <div class="notification-date">
+                            <span class="day">28</span>
+                            <span class="month">يناير</span>
+                        </div>
+                        <div class="notification-content">
+                            <h4>ورشة إدارة الوقت</h4>
+                            <p>ورشة تدريبية حول إدارة الوقت وتنظيم الأولويات في العمل</p>
+                            <div class="notification-meta">
+                                <span>📍 قاعة التدريب - مركز إربد</span>
+                                <span>🕐 2:00 م - 5:00 م</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="notification-item" data-type="meetings">
+                        <div class="notification-date">
+                            <span class="day">30</span>
+                            <span class="month">يناير</span>
+                        </div>
+                        <div class="notification-content">
+                            <h4>اجتماع فريق العلاقات العامة</h4>
+                            <p>اجتماع شهري لفريق العلاقات العامة لمناقشة الحملات الإعلامية</p>
+                            <div class="notification-meta">
+                                <span>📍 قاعة الاجتماعات - المقر الرئيسي</span>
+                                <span>🕐 11:00 ص - 12:30 م</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="notification-item" data-type="events">
+                        <div class="notification-date">
+                            <span class="day">02</span>
+                            <span class="month">فبراير</span>
+                        </div>
+                        <div class="notification-content">
+                            <h4>يوم الصحة المفتوح</h4>
+                            <p>يوم مفتوح لتقديم الخدمات الصحية المجانية للمجتمع</p>
+                            <div class="notification-meta">
+                                <span>📍 مركز الزرقاء</span>
+                                <span>🕐 9:00 ص - 3:00 م</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- الاقتراحات والشكاوي -->
+        <section id="suggestions" class="main-section">
+            <div class="section-header">
+                <h2>💭 زاوية الاقتراحات والشكاوي</h2>
+                <p>منصة آمنة لتقديم الاقتراحات والشكاوي بشكل مجهول</p>
+            </div>
+            
+            <div class="suggestions-container">
+                <div class="suggestion-form-container">
+                    <h3>تقديم اقتراح أو شكوى</h3>
+                    <form id="suggestionForm" class="suggestion-form">
+                        <div class="form-group">
+                            <label for="suggestion-type">نوع الرسالة</label>
+                            <select id="suggestion-type" required>
+                                <option value="">اختر نوع الرسالة</option>
+                                <option value="suggestion">اقتراح</option>
+                                <option value="complaint">شكوى</option>
+                                <option value="feedback">ملاحظة</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="suggestion-category">الفئة</label>
+                            <select id="suggestion-category" required>
+                                <option value="">اختر الفئة</option>
+                                <option value="administration">إدارة</option>
+                                <option value="services">خدمات</option>
+                                <option value="facilities">مرافق</option>
+                                <option value="staff">موظفين</option>
+                                <option value="other">أخرى</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="suggestion-center">المركز المعني (اختياري)</label>
+                            <select id="suggestion-center">
+                                <option value="">اختر المركز</option>
+                                <option value="amman">مركز عمان</option>
+                                <option value="irbid">مركز إربد</option>
+                                <option value="zarqa">مركز الزرقاء</option>
+                                <option value="karak">مركز الكرك</option>
+                                <option value="aqaba">مركز العقبة</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="suggestion-message">رسالتك</label>
+                            <textarea id="suggestion-message" rows="6" required
+                                placeholder="اكتب اقتراحك أو شكواك هنا..."></textarea>
+                        </div>
+                        
+                        <div class="anonymous-notice">
+                            <p>🔒 <strong>ملاحظة:</strong> جميع الرسائل مجهولة الهوية وآمنة تماماً</p>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">إرسال الرسالة</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+        <!-- الحملات -->
+        <section id="campaigns" class="main-section">
+            <div class="section-header">
+                <h2>🎯 الحملات</h2>
+                <p>الحملات الحالية والقادمة التي تنظمها الجمعية</p>
+            </div>
+            
+            <div class="campaigns-container">
+                <div class="campaign-card featured">
+                    <div class="campaign-badge">جارية</div>
+                    <div class="campaign-image">
+                        <div class="campaign-icon">❄️</div>
+                    </div>
+                    <div class="campaign-content">
+                        <h3>حملة الدفء الشتوي</h3>
+                        <p>حملة شاملة لتوزيع الملابس الشتوية والبطانيات على الأسر المحتاجة في جميع المحافظات</p>
+                        <div class="campaign-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 75%"></div>
+                            </div>
+                            <span>75% مكتمل</span>
+                        </div>
+                        <div class="campaign-stats">
+                            <div class="stat">
+                                <strong>500</strong>
+                                <span>أسرة مستفيدة</span>
+                            </div>
+                            <div class="stat">
+                                <strong>1,200</strong>
+                                <span>قطعة ملابس</span>
+                            </div>
+                            <div class="stat">
+                                <strong>300</strong>
+                                <span>بطانية</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="campaign-card">
+                    <div class="campaign-badge upcoming">قادمة</div>
+                    <div class="campaign-image">
+                        <div class="campaign-icon">🎓</div>
+                    </div>
+                    <div class="campaign-content">
+                        <h3>حملة العودة للمدارس</h3>
+                        <p>حملة لتوزيع الحقائب المدرسية والقرطاسية على الطلاب المحتاجين</p>
+                        <div class="campaign-date">
+                            <strong>تاريخ البدء:</strong> 15 أغسطس 2024
+                        </div>
+                        <div class="campaign-target">
+                            <strong>الهدف:</strong> 1,000 طالب
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="campaign-card">
+                    <div class="campaign-badge completed">مكتملة</div>
+                    <div class="campaign-image">
+                        <div class="campaign-icon">🏥</div>
+                    </div>
+                    <div class="campaign-content">
+                        <h3>حملة الفحص الطبي المجاني</h3>
+                        <p>حملة طبية شاملة لتقديم الفحوصات المجانية للمواطنين</p>
+                        <div class="campaign-results">
+                            <div class="result">
+                                <strong>800</strong>
+                                <span>مستفيد</span>
+                            </div>
+                            <div class="result">
+                                <strong>1,500</strong>
+                                <span>فحص</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="campaign-card">
+                    <div class="campaign-badge planning">تحت التخطيط</div>
+                    <div class="campaign-image">
+                        <div class="campaign-icon">🌱</div>
+                    </div>
+                    <div class="campaign-content">
+                        <h3>حملة تشجير المدارس</h3>
+                        <p>مبادرة بيئية لزراعة الأشجار في المدارس والحدائق العامة</p>
+                        <div class="campaign-status">
+                            <strong>الحالة:</strong> في مرحلة التخطيط
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- React + Babel (UMD) for embedding the React directory app -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- Inline JSX application copied from data/app.html (lines ~60-373) -->
+    <script type="text/babel">
+        const { useState, useEffect, useMemo } = React;
+        // --- Data Source ---
+        const directoryData = {
+          "اسم_الجمعية": "جمعية المركز الإسلامي الخيرية",
+          "القطاعات": [
+            {
+              "اسم_القطاع": "قطاع الرعاية الاجتماعية والبرامج التنموية",
+              "الوصف": "يعمل القطاع على تقديم الرعاية الاجتماعية وتنفيذ البرامج التنموية من خلال 65 مركزاً منتشرة في محافظات المملكة.",
+              "مراكز_الخدمات_المجتمعية": [
+                { "المحافظة": "محافظة العاصمة", "المراكز": [ { "الرقم": 1, "اسم_المركز": "مركز النظيف للخدمات المجتمعية", "هاتف_خلوي": ["06/4740522", "079/5309705"], "العنوان_الجغرافي": "عمان - جبل النظيف مقابل مدرسة أم تينة", "رقم_الحساب_البنك_الإسلامي": "فرع الوحدات (15329)", "رقم_المحفظة": "IC 20" } ,{"الرقم": 2, "اسم_المركز": "مركز جبل الجوفة للخدمات المجتمعية", "هاتف_خلوي": ["06/4765313"], "العنوان_الجغرافي": "عمان - الجوفة - حي نبيلكا خلف مدارس الوكالة","رقم_المحفظة": "IC 32"}, { "الرقم": 3, "اسم_المركز": "مركز مخيم الوحدات للخدمات المجتمعية", "هاتف_خلوي": ["06/4731058", "079/5593879"], "العنوان_الجغرافي": "عمان - مخيم الوحدات في شعبة ط4 - مسجد المدارس", "رقم_المحفظة": "IC 23" }, { "الرقم": 4, "اسم_المركز": "مركز جبل النصر للخدمات المجتمعية", "هاتف_خلوي": ["06/4907408"], "العنوان_الجغرافي": "عمان - جبل النصر - ش. السيدة زينب - مجمع الحاج صالح الكتنوت", "رقم_المحفظة": "IC 34" }, { "الرقم": 5, "اسم_المركز": "مركز مخيم المحطة للخدمات المجتمعية", "هاتف_خلوي": ["06/4902315"], "العنوان_الجغرافي": "عمان - مخيم المحطة - خلف سوق الخضار", "رقم_المحفظة": "IC 37" }, { "الرقم": 6, "اسم_المركز": "مركز البيادر للخدمات المجتمعية", "هاتف_خلوي": ["06/5862012"], "العنوان_الجغرافي": "عمان - بيادر وادي السير ش. الرئيسي خلف مطعم القدس", "رقم_المحفظة": "IC 14" }, { "الرقم": 7, "اسم_المركز": "مركز القويسمة للخدمات المجتمعية", "هاتف_خلوي": ["06/4756586"], "العنوان_الجغرافي": "عمان - القويسمة - مقابل مدينة الملك عبدالله الثاني الرياضية", "رقم_المحفظة": "IC 25" }, { "الرقم": 8, "اسم_المركز": "مركز جبل الحسين للخدمات المجتمعية", "هاتف_خلوي": ["06/4643115"], "العنوان_الجغرافي": "عمان - جبل الحسين - مقابل حديقة الهويمل - بجانب نادي المستقبل", "رقم_المحفظة": "IC 09" }, { "الرقم": 9, "اسم_المركز": "مركز جبل الزهور للخدمات المجتمعية", "هاتف_خلوي": ["06/4388402"], "العنوان_الجغرافي": "عمان - جبل الزهور - خلف الحديقة المرورية - مبنى مسجد الرضوان", "رقم_المحفظة": "IC 21" }, { "الرقم": 10, "اسم_المركز": "مركز صويلح للخدمات المجتمعية", "هاتف_خلوي": ["06/5335144"], "العنوان_الجغرافي": "عمان - صويلح الحي الشرقي دخلة محمص الريحان ش. علي فاخر", "رقم_المحفظة": "IC 11" }, { "الرقم": 11, "اسم_المركز": "مركز ماركا الشمالية للخدمات المجتمعية", "هاتف_خلوي": ["06/4889030"], "العنوان_الجغرافي": "عمان - ماركا الشمالية - حي المزارع بالقرب من مسجد مخيمر أبو جاموس", "رقم_المحفظة": "IC 38" }, { "الرقم": 12, "اسم_المركز": "مركز الجبيهة للخدمات المجتمعية", "هاتف_خلوي": ["06/4889030"], "العنوان_الجغرافي": "عمان - الجبيهة - الطيبة - ش. الجمعية - مقابل مركز العطاء الطبي", "رقم_المحفظة": "IC 28" }, { "الرقم": 13, "اسم_المركز": "مركز جبل القصور للخدمات المجتمعية", "هاتف_خلوي": ["078/8711548"], "العنوان_الجغرافي": "عمان - جبل القصور - حي الدغافلي لمسجد المجاهدين - مخابز بور سعيد", "رقم_المحفظة": "IC 61" }, { "الرقم": 14, "اسم_المركز": "مركز المقابلين للخدمات المجتمعية", "هاتف_خلوي": ["06/4206482"], "العنوان_الجغرافي": "عمان - المقابلين - الدوار الرابع مقابل محلات الصالح", "رقم_المحفظة": "IC 53" }, { "الرقم": 15, "اسم_المركز": "مركز سحاب للخدمات المجتمعية", "هاتف_خلوي": ["06/4024232"], "العنوان_الجغرافي": "عمان - سحاب - النهر الخالد بالقرب من مدرسة حفصة بنت عمر", "رقم_المحفظة": "IC 41" }, { "الرقم": 16, "اسم_المركز": "مركز الحراج للخدمات المجتمعية", "هاتف_خلوي": ["06/5733888"], "العنوان_الجغرافي": "عمان - مرج الحمام - دوار الدلة خلف بنك الاسكان", "رقم_المحفظة": "IC 94" }, { "الرقم": 17, "اسم_المركز": "مركز حي نزال للخدمات المجتمعية", "هاتف_خلوي": ["06/4396972"], "العنوان_الجغرافي": "عمان - حي نزال - الجبل الأخضر ش. حليمة السعدية", "رقم_المحفظة": "IC 15" }, { "الرقم": 18, "اسم_المركز": "مركز طبربور للخدمات المجتمعية", "هاتف_خلوي": ["079/6980002"], "العنوان_الجغرافي": "عمان - طبربور بجانب مستشفى الأقصى", "رقم_المحفظة": "IC 31" }] },
+            { "المحافظة": "محافظة الزرقاء", "المراكز": [ { "الرقم": 19, "اسم_المركز": "مركز الزرقاء للخدمات المجتمعية", "هاتف_خلوي": ["05/3985600"], "العنوان_الجغرافي": "الزرقاء - الوسط التجاري - مثلث الوفا - ش. الفاروق","رقم_المحفظة": "IC 19"}, { "الرقم": 20, "اسم_المركز": "مركز مخيم الزرقاء للخدمات المجتمعية", "هاتف_خلوي": ["05/3996334"], "العنوان_الجغرافي": "الزرقاء - مخيم الزرقاء - أول صف رقيم", "رقم_المحفظة": "IC 47" }, { "الرقم": 21, "اسم_المركز": "مركز الرصيفة للخدمات المجتمعية", "هاتف_خلوي": ["05/3743360"], "العنوان_الجغرافي": "الرصيفة - الجبل الشمالي - مثلث البركة - بجانب محطة البركة", "رقم_المحفظة": "C 42" }, { "الرقم": 22, "اسم_المركز": "مركز مخيم حطين للخدمات المجتمعية", "هاتف_خلوي": ["05/3611440"], "العنوان_الجغرافي": "الرصيفة - مخيم حطين - خلف مدرسة طه حسين الثانوية", "رقم_المحفظة": "C 40" }, { "الرقم": 23, "اسم_المركز": "مركز الظليل للخدمات المجتمعية", "هاتف_خلوي": ["05/3824469"], "العنوان_الجغرافي": "الزرقاء - الظليل - مثلث الحلابات مقابل البنك الإسلامي", "رقم_المحفظة": "IC 49" }, { "الرقم": 24, "اسم_المركز": "مركز مخيم السخنة للخدمات المجتمعية", "هاتف_خلوي": ["05/3844098"], "العنوان_الجغرافي": "الزرقاء - السخنة - الحي الشرقي خلف مسجد عمر بن الخطاب", "رقم_المحفظة": "IC 28" }, { "الرقم": 25, "اسم_المركز": "مركز الهاشمية للخدمات المجتمعية", "هاتف_خلوي": ["05/3811992"], "العنوان_الجغرافي": "الزرقاء - الهاشمية - اسكان الهاشمية قرب مسجد ابن تيمية", "رقم_المحفظة": "IC 26" }, { "الرقم": 26, "اسم_المركز": "مركز عوجان للخدمات المجتمعية", "هاتف_خلوي": ["0782003347"], "العنوان_الجغرافي": "الزرقاء - عوجان - مسجد الحموري", "رقم_المحفظة": "IC 44" }] },
+            { "المحافظة": "محافظة البلقاء", "المراكز": [ { "الرقم": 27, "اسم_المركز": "مركز مخيم البقعة للخدمات المجتمعية", "هاتف_خلوي": ["06/4725049"], "العنوان_الجغرافي": "عمان - محافظة البلقاء - البقعة مخيم البقعة - مجمع البر والإحسان", "رقم_المحفظة": "IC 55" }, { "الرقم": 28, "اسم_المركز": "مركز الشونة الجنوبية للخدمات المجتمعية", "هاتف_خلوي": ["05/3581196"], "العنوان_الجغرافي": "لواء الشونة الجنوبية - منطقة الكرامة - قرب مسجد الشهداء", "رقم_المحفظة": "IC 58" }, { "الرقم": 29, "اسم_المركز": "مركز السلط للخدمات المجتمعية", "هاتف_خلوي": ["078/2444279"], "العنوان_الجغرافي": "السلط - دبابنه - خلف مديرية العمل مقابل مدارس الفرسان", "رقم_المحفظة": "IC 59" }, { "الرقم": 30, "اسم_المركز": "مركز عين الباشا للخدمات المجتمعية", "هاتف_خلوي": ["06/5370765"], "العنوان_الجغرافي": "عين الباشا - صافوط قرب بلدية صافوط", "رقم_المحفظة": "IC 54" }, { "الرقم": 31, "اسم_المركز": "مركز دير علا للخدمات المجتمعية", "هاتف_خلوي": ["05/3574500"], "العنوان_الجغرافي": "دير علا - معدي مقابل مبنى البلدية", "رقم_المحفظة": "IC 87" }] },
+            { "المحافظة": "محافظة مادبا", "المراكز": [ { "الرقم": 32, "اسم_المركز": "مركز مادبا للخدمات المجتمعية", "هاتف_خلوي": ["078/9991784"], "العنوان_الجغرافي": "مادبا - مخيم مادبا", "رقم_المحفظة": "IC 29" }, { "الرقم": 33, "اسم_المركز": "مركز مخيم الطالبية للخدمات المجتمعية", "هاتف_خلوي": ["06/4460230"], "العنوان_الجغرافي": "مادبا - مخيم الطالبية - الجيزة ش. المطار - قرب مطعم مكسيم", "رقم_المحفظة": "IC 33" }, { "الرقم": 34, "اسم_المركز": "مركز ذيبان للخدمات المجتمعية", "هاتف_خلوي": ["05/3206947"], "العنوان_الجغرافي": "ذيبان - مثلث القاسمية", "رقم_المحفظة": "IC 90" }] },
+            { "المحافظة": "محافظة اربد", "المراكز": [ { "الرقم": 35, "اسم_المركز": "مركز اربد للخدمات المجتمعية", "هاتف_خلوي": ["02/7279589"], "العنوان_الجغرافي": "اربد - ش. بلاط الشهداء - مدخل المخيم الغربي", "رقم_المحفظة": "IC 18" }, { "الرقم": 36, "اسم_المركز": "مركز لواء الوسطية للخدمات المجتمعية", "هاتف_خلوي": ["02/7305919"], "العنوان_الجغرافي": "اربد - لواء الوسطية - بلدة قميم", "رقم_المحفظة": "IC 71" }, { "الرقم": 37, "اسم_المركز": "مركز لواء الكورة للخدمات المجتمعية", "هاتف_خلوي": ["02/6522157"], "العنوان_الجغرافي": "اربد - لواء الكورة - دير ابي سعيد خلف الاتصالات", "رقم_المحفظة": "IC 68" }, { "الرقم": 38, "اسم_المركز": "مركز جديتا للخدمات المجتمعية", "هاتف_خلوي": ["077/0522773"], "العنوان_الجغرافي": "اربد - لواء الكورة - جديتا - وسط البلد", "رقم_المحفظة": "IC 30" }, { "الرقم": 39, "اسم_المركز": "مركز الرمثا للخدمات المجتمعية", "هاتف_خلوي": ["02/7384867"], "العنوان_الجغرافي": "الرمثا - مجمع الشيخ - المسجد العمري - قرب مجمع السيارات", "رقم_المحفظة": "IC 36" }, { "الرقم": 40, "اسم_المركز": "مركز الشونة الشمالية للخدمات المجتمعية", "هاتف_خلوي": ["02/6577390"], "العنوان_الجغرافي": "الشونة الشمالية - قرب مديرية لواء الأغوار الشمالية", "رقم_المحفظة": "IC 69" }, { "الرقم": 41, "اسم_المركز": "مركز مخيم الشهيد للخدمات المجتمعية", "هاتف_خلوي": ["02/7060738"], "العنوان_الجغرافي": "اربد - مخيم الشهيد عزمي المفتي مقابل مدرسة الإناث - وكالة الغوث", "رقم_المحفظة": "IC 72" }, { "الرقم": 42, "اسم_المركز": "مركز المزار الشمالي للخدمات المجتمعية", "هاتف_خلوي": ["02/7034493"], "العنوان_الجغرافي": "المزار الشمالي - ش. الدفاع المدني - حي الظهر - مقابل مركز الشباب", "رقم_المحفظة": "IC 85" }, { "الرقم": 43, "اسم_المركز": "مركز الصريح للخدمات المجتمعية", "هاتف_خلوي": ["079/9891378"], "العنوان_الجغرافي": "اربد - لواء بني عبيد - الصريح - قرب مسجد أبو بكر الصديق", "رقم_المحفظة": "IC 96" }, { "الرقم": 44, "اسم_المركز": "مركز النعيمة للخدمات المجتمعية", "هاتف_خلوي": ["02/7057417"], "العنوان_الجغرافي": "اربد - لواء بني عبيد - النعيمة - مقابل مدرسة حمد الفرحان", "رقم_المحفظة": "IC 74" }, { "الرقم": 45, "اسم_المركز": "مركز ايدون للخدمات المجتمعية", "هاتف_خلوي": ["02/7101655"], "العنوان_الجغرافي": "اربد - ايدون - شرق مخابز قاسيون", "رقم_المحفظة": "IC 10" }, { "الرقم": 46, "اسم_المركز": "مركز الشجرة للخدمات المجتمعية", "هاتف_خلوي": ["078/2338882"], "العنوان_الجغرافي": "الرمثا - الشجرة - الحي الشرقي خلف مسجد العواد بن مالك", "رقم_المحفظة": "IC 39" }] },
+            { "المحافظة": "محافظة عجلون", "المراكز": [ { "الرقم": 47, "اسم_المركز": "مركز عجلون للخدمات المجتمعية", "هاتف_خلوي": ["02/6422110"], "العنوان_الجغرافي": "عجلون - عين جنا ش. مركز أمن المدينة", "رقم_المحفظة": "IC 67" }] },
+            { "المحافظة": "محافظة المفرق", "المراكز": [ { "الرقم": 48, "اسم_المركز": "مركز المفرق للخدمات المجتمعية", "هاتف_خلوي": ["02/6233089"], "العنوان_الجغرافي": "المفرق - ش. الجيش - بجانب مبنى المحافظة", "رقم_المحفظة": "IC 22" }] },
+            { "المحافظة": "محافظة جرش", "المراكز": [ { "الرقم": 49, "اسم_المركز": "مركز مخيم غزة للخدمات المجتمعية", "هاتف_خلوي": ["02/6338330"], "العنوان_الجغرافي": "جرش - مخيم غزة - بالقرب من مديرية زراعة جرش", "رقم_المحفظة": "IC 65" }, { "الرقم": 50, "اسم_المركز": "مركز مخيم سوف للخدمات المجتمعية", "هاتف_خلوي": ["02/6341393"], "العنوان_الجغرافي": "جرش - مخيم سوف - الشارع الرئيسي - خلف السوق", "رقم_المحفظة": "IC 64" }, { "الرقم": 51, "اسم_المركز": "مركز جرش للخدمات المجتمعية", "هاتف_خلوي": ["02/6341706"], "العنوان_الجغرافي": "جرش - ش. المفرق - بجانب قاعة بلدية جرش", "رقم_المحفظة": "IC 83" }, { "الرقم": 52, "اسم_المركز": "مركز المعراض للخدمات المجتمعية", "هاتف_خلوي": ["02/6337131"], "العنوان_الجغرافي": "جرش - ساكب - بجانب مركز صحي ساكب", "رقم_المحفظة": "IC 97" }] },
+            { "المحافظة": "محافظة الطفيلة", "المراكز": [ { "الرقم": 53, "اسم_المركز": "مركز الطفيلة للخدمات المجتمعية", "هاتف_خلوي": ["03/2241968"], "العنوان_الجغرافي": "الطفيلة - وادي زيد - بالقرب من مدرسة الأمير الحسن الثانوية للبنين", "رقم_المحفظة": "IC 75" }, { "الرقم": 54, "اسم_المركز": "مركز لواء بصيرا للخدمات المجتمعية", "هاتف_خلوي": ["03/2267488"], "العنوان_الجغرافي": "لواء بصيرا ريعا - بالقرب من شركة الكهرباء الفرع الجديد", "رقم_المحفظة": "IC 88" }] },
+            { "المحافظة": "محافظة الكرك", "المراكز": [ { "الرقم": 55, "اسم_المركز": "مركز الكرك للخدمات المجتمعية", "هاتف_خلوي": ["03/2351838"], "العنوان_الجغرافي": "الكرك - قرب أصحاب الفاروق خلف مختبر مدلاب", "رقم_المحفظة": "IC 81" }, { "الرقم": 56, "اسم_المركز": "مركز القصر للخدمات المجتمعية", "هاتف_خلوي": ["03/2315041"], "العنوان_الجغرافي": "الكرك - لواء القصر - حي مدارس الفاروق الإسلامية", "رقم_المحفظة": "IC 73" }, { "الرقم": 57, "اسم_المركز": "مركز المزار الجنوبي للخدمات المجتمعية", "هاتف_خلوي": ["03/2370677"], "العنوان_الجغرافي": "الكرك - المزار الجنوبي - ش. الرئيسي بجانب قاعة أعمار المزار الجنوبي", "رقم_المحفظة": "IC 95" }, { "الرقم": 58, "اسم_المركز": "مركز غور الصافي وغور المزرعة والحديثة للخدمات المجتمعية", "هاتف_خلوي": ["0782003345"], "العنوان_الجغرافي": "غور الصافي - قرب المحكمة الشرعية. غور المزرعة - قرب مجمع الباصات خلف مخابز الوارملة", "رقم_المحفظة": "IC 60" }, { "الرقم": 59, "اسم_المركز": "مركز فقوع للخدمات المجتمعية", "هاتف_خلوي": ["078/8889563"], "العنوان_الجغرافي": "الكرك - لواء فقوع - خلف المتصرفية", "رقم_المحفظة": "IC 43" }] },
+            { "المحافظة": "محافظة معان", "المراكز": [ { "الرقم": 60, "اسم_المركز": "مركز معان للخدمات المجتمعية", "هاتف_خلوي": ["03/2135531"], "العنوان_الجغرافي": "معان - ش. فلسطين - خلف مسجد سيد الشهداء", "رقم_المحفظة": "IC 77" }, { "الرقم": 61, "اسم_المركز": "مركز وادي موسى للخدمات المجتمعية", "هاتف_خلوي": ["03/2155035"], "العنوان_الجغرافي": "معان - وادي موسى - وسط البلد خلف المسجد الكبير", "رقم_المحفظة": "IC 91" }, { "الرقم": 62, "اسم_المركز": "مركز الشوبك للخدمات المجتمعية", "هاتف_خلوي": ["03/2165164"], "العنوان_الجغرافي": "معان - الشوبك - حي بلال - مقابل مدرسة الشوبك الثانوية", "رقم_المحفظة": "IC 62" }, { "الرقم": 63, "اسم_المركز": "مركز المريغة للخدمات المجتمعية", "هاتف_خلوي": ["03/2120180"], "العنوان_الجغرافي": "معان - المريغة - مقابل المؤسسة الاستهلاكية - بجانب قاعة البلدية", "رقم_المحفظة": "IC 92" }] },
+            { "المحافظة": "محافظة العقبة", "المراكز": [ { "الرقم": 64, "اسم_المركز": "مركز العقبة للخدمات المجتمعية", "هاتف_خلوي": ["03/2035858"], "العنوان_الجغرافي": "العقبة - بجانب المستشفى الإسلامي العقبة", "رقم_المحفظة": "IC 79" }] }
+          ]
+        };
+        // --- Helper Function to flatten and normalize the data ---
+        const normalizeGovernorate = (gov) => {
+            if (!gov) return null;
+            // A map to standardize governorate names based on Jordan's 12 official governorates
+            const govMap = {
+                'العاصمة': 'عمان',
+                'عمان': 'عمان',
+                'الزرقاء': 'الزرقاء',
+                'الرصيفة': 'الزرقاء',
+                'اربد': 'إربد',
+                'إربد': 'إربد',
+                'البلقاء': 'البلقاء',
+                'الشونة الجنوبية': 'البلقاء',
+                'السلط': 'البلقاء',
+                'مادبا': 'مادبا',
+                'عجلون': 'عجلون',
+                'المفرق': 'المفرق',
+                'جرش': 'جرش',
+                'الطفيلة': 'الطفيلة',
+                'الكرك': 'الكرك',
+                'معان': 'معان',
+                'العقبة': 'العقبة'
+            };
+            // Find the standard name by checking if the input string contains a key from our map
+            for (const key in govMap) {
+                if (gov.includes(key)) {
+                    return govMap[key];
+                }
+            }
+            // Fallback if no match is found
+            return gov.replace('محافظة ', '').replace('لواء ', '');
+        };
+        const flattenData = (data) => {
+            const allListings = [];
+            data.القطاعات.forEach(sector => {
+                // 1. Process Social Care Centers
+                if (sector.مراكز_الخدمات_المجتمعية) {
+                    sector.مراكز_الخدمات_المجتمعية.forEach(gov => {
+                        gov.المراكز.forEach(center => {
+                            allListings.push({
+                                id: `s-${center.الرقم || center.اسم_المركز}`,
+                                name: center.اسم_المركز,
+                                address: center.العنوان_الجغرافي,
+                                phones: Array.isArray(center.هاتف_خلوي) ? center.هاتف_خلوي : [center.هاتف_خلوي],
+                                wallet: center.رقم_المحفظة,
+                                sector: sector.اسم_القطاع,
+                                governorate: normalizeGovernorate(gov.المحافظة)
+                            });
+                        });
+                    });
+                }
+                // 2. Process Medical Institutions
+                if (sector.المؤسسات_الطبية) {
+                    sector.المؤسسات_الطبية.forEach(inst => {
+                        allListings.push({
+                            id: `h-${inst.الرقم || inst.اسم_المؤسسة}`,
+                            name: inst.اسم_المؤسسة,
+                            address: inst.المنطقة,
+                            phones: Array.isArray(inst.هاتف) ? inst.هاتف : [inst.هاتف],
+                            sector: sector.اسم_القطاع,
+                            governorate: normalizeGovernorate(inst.المنطقة)
+                        });
+                    });
+                }
+                // 3. Process Educational Institutions and their sub-schools
+                if (sector.المؤسسات_التعليمية) {
+                    sector.المؤسسات_التعليمية.forEach(inst => {
+                        // Add the main institution
+                        allListings.push({
+                            id: `e-${inst.الاسم}`,
+                            name: inst.الاسم,
+                            address: inst.العنوان,
+                            phones: inst.معلومات_الاتصال.هاتف ? (Array.isArray(inst.معلومات_الاتصال.هاتف) ? inst.معلومات_الاتصال.هاتف : [inst.معلومات_الاتصال.هاتف]) : [],
+                            sector: sector.اسم_القطاع,
+                            governorate: normalizeGovernorate(inst.المحافظة)
+                        });
+                        // Add sub-schools/branches if they exist
+                        const subSchools = inst.المدارس_التابعة || inst.المدارس_والرياض_التابعة || inst.المؤسسات_التعليمية_التابعة;
+                        if (subSchools) {
+                            subSchools.forEach(sub => {
+                                allListings.push({
+                                    id: `e-sub-${sub.ت || sub.المدرسة}`,
+                                    name: sub.المدرسة,
+                                    address: sub.العنوان,
+                                    phones: sub.رقم_الهاتف ? [sub.رقم_الهاتف] : [],
+                                    sector: sector.اسم_القطاع,
+                                    governorate: normalizeGovernorate(inst.المحافظة) // Inherit governorate from parent
+                                });
+                            });
+                        }
+                    });
+                }
+            });
+            return allListings;
+        };
+        // --- Main App Component ---
+        function App() {
+            const [listings, setListings] = useState([]);
+            const [searchTerm, setSearchTerm] = useState('');
+            const [selectedSector, setSelectedSector] = useState('الكل');
+            const [selectedGov, setSelectedGov] = useState('الكل');
+            // On component mount, process and set the data
+            useEffect(() => {
+                const flatData = flattenData(directoryData);
+                setListings(flatData);
+            }, []);
+            // Memoize derived data to avoid recalculations on every render
+            const sectors = useMemo(() => ['الكل', ...new Set(listings.map(item => item.sector))], [listings]);
+            const governorates = useMemo(() => ['الكل', ...Array.from(new Set(listings.map(item => item.governorate).filter(g => g))).sort()], [listings]);
+            // Filter logic
+            const filteredListings = useMemo(() => {
+                return listings.filter(item => {
+                    const searchTermLower = searchTerm.toLowerCase();
+                    const matchesName = item.name && item.name.toLowerCase().includes(searchTermLower);
+                    const matchesWallet = item.wallet && item.wallet.toLowerCase().includes(searchTermLower);
+                    const matchesSearch = matchesName || matchesWallet;
+                    const matchesSector = selectedSector === 'الكل' || item.sector === selectedSector;
+                    const matchesGov = selectedGov === 'الكل' || item.governorate === selectedGov;
+                    return matchesSearch && matchesSector && matchesGov;
+                });
+            }, [listings, searchTerm, selectedSector, selectedGov]);
+            return (
+                <div className="container mx-auto p-4 md:p-8">
+                    <Header />
+                    <Filters
+                        sectors={sectors}
+                        governorates={governorates}
+                        onSearchChange={setSearchTerm}
+                        onSectorChange={setSelectedSector}
+                        onGovChange={setSelectedGov}
+                        resultCount={filteredListings.length}
+                    />
+                    <DirectoryGrid listings={filteredListings} />
+                </div>
+            );
+        }
+        // --- Header Component ---
+        const Header = () => (
+            <header className="text-center mb-8">
+                <h1 className="text-4xl md:text-5xl font-extrabold text-[#8D2426] mb-2">{directoryData.اسم_الجمعية}</h1>
+                <p className="text-xl text-gray-600">دليل المراكز والفروع</p>
+            </header>
+        );
+        // --- Filters Component ---
+        const Filters = ({ sectors, governorates, onSearchChange, onSectorChange, onGovChange, resultCount }) => {
+            return (
+                <div className="bg-white p-4 rounded-lg shadow-md mb-8 sticky top-4 z-10">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        {/* Search Input */}
+                        <div className="relative">
+                            <input
+                                type="text"
+                                placeholder="ابحث بالاسم أو رقم المحفظة..."
+                                onChange={(e) => onSearchChange(e.target.value)}
+                                className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#8D2426] focus:border-transparent transition"
+                            />
+                             <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                        </div>
+                        {/* Sector Filter */}
+                        <select onChange={(e) => onSectorChange(e.target.value)} className="w-full p-3 border border-gray-300 rounded-md bg-white focus:ring-2 focus:ring-[#8D2426] focus:border-transparent transition">
+                            {sectors.map(sector => <option key={sector} value={sector}>{sector}</option>)}
+                        </select>
+                        {/* Governorate Filter */}
+                        <select onChange={(e) => onGovChange(e.target.value)} className="w-full p-3 border border-gray-300 rounded-md bg-white focus:ring-2 focus:ring-[#8D2426] focus:border-transparent transition">
+                            {governorates.map(gov => <option key={gov} value={gov}>{gov}</option>)}
+                        </select>
+                    </div>
+                    <p className="text-center mt-4 text-gray-500">تم العثور على {resultCount} نتيجة</p>
+                </div>
+            );
+        };
+        // --- Directory Grid Component ---
+        const DirectoryGrid = ({ listings }) => {
+            if (listings.length === 0) {
+                return (
+                    <div className="text-center py-16">
+                        <p className="text-2xl text-gray-500">لا توجد نتائج مطابقة لبحثك.</p>
+                        <p className="text-gray-400 mt-2">يرجى محاولة تغيير فلاتر البحث.</p>
+                    </div>
+                );
+            }
+            return (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {listings.map(item => <DirectoryCard key={item.id} item={item} />)}
+                </div>
+            );
+        };
+        // --- Directory Card Component ---
+        const DirectoryCard = ({ item }) => {
+            const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.address)}`;
+            return (
+                <div className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-1 transition-transform duration-300 flex flex-col">
+                    <div className="p-6 flex-grow">
+                        <p className="text-sm text-[#F37A20] font-bold">{item.sector}</p>
+                        <h3 className="text-2xl font-bold text-[#8D2426] mt-1 mb-3">{item.name}</h3>
+                        {item.address && (
+                            <a href={mapUrl} target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 text-gray-700 mb-4 hover:text-[#005DAA]">
+                                <svg className="w-6 h-6 flex-shrink-0 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                                <span>{item.address}</span>
+                            </a>
+                        )}
+                        {item.phones && item.phones.length > 0 && (
+                             <div className="flex items-start gap-3 text-gray-700">
+                                <svg className="w-6 h-6 flex-shrink-0 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                                <div className="flex flex-col">
+                                    {item.phones.filter(p => p).map(phone => (
+                                        <a key={phone} href={`tel:${phone.replace(/\//g, '')}`} className="hover:text-[#005DAA]">{phone}</a>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                     {item.wallet && (
+                        <div className="bg-gray-50 p-4 border-t border-gray-200">
+                            <p className="text-sm text-gray-500 text-center">
+                                <span className="font-bold">رقم المحفظة:</span> {item.wallet}
+                            </p>
+                        </div>
+                    )}
+                </div>
+            );
+        };
+        // --- Render the App ---
+        const container = document.getElementById('directory-root');
+        const root = ReactDOM.createRoot(container);
+        root.render(<App />);
+    </script>
+    <!-- Existing site scripts (kept after React/Babel and inline JSX to avoid init conflicts) -->
+    <script src="js/test-data.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/roles.js"></script>
+</body>
+</html>
