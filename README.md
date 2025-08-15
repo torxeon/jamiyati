@@ -72,6 +72,13 @@ npx http-server -p 8000
 # ثم افتح المتصفح على
 # http://localhost:8000
 ```
+## النشر على منصة Railway
+1. ثبت [Railway CLI](https://docs.railway.app/develop/cli)
+2. سجل الدخول: `railway login`
+3. اربط المشروع: `railway init`
+4. انشر التطبيق: `railway up`
+
+يحدد ملفا `railway.json` و`Procfile` أمر البدء (`npm start`) وإعدادات النشر.
 ## بيانات الدخول التجريبية
 للاختبار، يمكنك استخدام البيانات التالية:
 **البريد الإلكتروني:** `admin@jamiyati.org`  
