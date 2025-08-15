@@ -1,0 +1,10 @@
+{
+  "build": {
+    "builder": "NIXPACKS_BUILD"
+  },
+  "deploy": {
+    "startCommand": "npm start",
+    "healthcheckPath": "/",
+    "numReplicas": 1
+  }
+}

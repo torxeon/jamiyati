@@ -72,6 +72,20 @@ npx http-server -p 8000
 # ثم افتح المتصفح على
 # http://localhost:8000
 ```
+## النشر على منصة Railway
+1. ثبت [Railway CLI](https://docs.railway.app/develop/cli)
+2. سجل الدخول: `railway login`
+3. اربط المشروع: `railway init`
+4. تأكد من تسجيل جميع التغييرات في Git:  
+   ```bash
+   git add .
+   git commit -m "prepare for deploy"
+   ```
+5. انشر التطبيق: `railway up`
+
+> في حال ظهور الرسالة *"Cannot create code snapshot right now"* تأكد من أن جميع التغييرات قد تم حفظها في commit ثم أعد المحاولة.
+
+يحدد ملفا `railway.json` و`Procfile` أمر البدء (`npm start`) وإعدادات النشر.
 ## بيانات الدخول التجريبية
 للاختبار، يمكنك استخدام البيانات التالية:
 **البريد الإلكتروني:** `admin@jamiyati.org`  
